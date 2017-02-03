@@ -1,4 +1,7 @@
 var gulp        = require('gulp');
+var minify = require('gulp-minify');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var bower = require('gulp-bower');
@@ -24,14 +27,24 @@ gulp.task('css', function() {
                config.bowerDir + '/bootstrap-sass/assets/stylesheets',
                config.bowerDir + '/font-awesome/scss',	
            ], errLogToConsole: true 
-        })
-
-   
-        )
+        }))
 
 		.pipe(gulp.dest("./css"))
         .pipe(browserSync.stream());
 });
+
+
+gulp.task('compress', function() {
+    return gulp.src([
+            config.bowerDir + '/jquery/dist/jquery.js',
+            config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.js',
+        ])
+        .pipe(uglify())
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest('./js/'))
+        .pipe(browserSync.stream());
+});
+
 
 
 gulp.task('icons', function() {
@@ -40,7 +53,7 @@ gulp.task('icons', function() {
 });
 
 // Static server
-gulp.task('serve',['css', 'bower', 'icons'], function() {
+gulp.task('serve',['css', 'bower', 'icons', 'compress'], function() {
 
     browserSync.init({
         server: "./"
@@ -50,6 +63,6 @@ gulp.task('serve',['css', 'bower', 'icons'], function() {
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
-
-
 gulp.task('default', ['serve']);
+
+//gulp.task('default', ['serve']);
