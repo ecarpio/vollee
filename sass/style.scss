@@ -1,11 +1,247 @@
 @import "bootstrap";
 @import "font-awesome";
 
-body {
-  padding-top: 50px;
+.monsterrat {
+	font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  padding-top: 50px;
+  @extend .monsterrat;
+  font-size:18px;
+  color:#000;
+}
+
+h3 {
+	font-size:1.7em;
+	font-weight:800;
+	margin:0px;
+	margin-bottom:30px;
+}
+
+h4 {
+	font-size:1.7em;
+	font-weight:300;
+	margin-bottom: 30px;
+}
+
+p {
+	color:#a7a7a7;
+	font-size:.9em;
+	line-height:2em;
+}
+
+a {
+	color:#000;
+	text-decoration: none;
+}
+
+
 .starter-template {
-  padding: 40px 15px;
+  padding: 70px 15px;
   text-align: center;
+}
+
+
+.navbar {
+	height:80px;
+	background:#fff;
+
+	.navbar-brand {
+		width:42px;
+		margin-right:40px;
+			img {
+				width:100%;
+				min-width: 42px;
+			}
+	}
+
+	.nav {
+
+		position: relative;
+		top:24px;
+
+		li {
+
+			&.active, &:hover, &.active {
+				background:none;
+				color:#000;
+					a, a:hover {
+						background:none;
+						color:#000;
+					}
+			}
+
+			a {
+				font-size:1em;
+				font-weight:300;
+				color:#000;
+			}
+		}
+	}
+}
+
+
+.hero-banner {
+	margin-top:30px;
+	padding-top:60px;
+	width:100%;
+	height:482px;
+	background:url(../assets/hero-banner.jpg);
+	background-size:cover;
+	background-position:center;
+	text-align: right;
+
+		.create-account {
+			background:#fff;
+			padding:20px 25px 0px 25px;
+			max-width: 450px;
+			text-align: left;
+			float:right;
+				input {
+					display: block;
+					width:100%;
+						&[type=text], &[type=password] {
+							font-size:16px;
+							border:0px;
+							padding-bottom:10px;
+							border-bottom:1px solid #969696;
+							margin-bottom:20px;
+						}
+				}
+
+				button {
+					width:100%;
+					font-size:20px;
+					margin-bottom:20px;
+				}
+
+				p {
+					font-size:16px;
+					margin-bottom:20px;
+				}
+		}
+}
+
+.media-trio {
+	margin-bottom:30px;
+
+	.container {
+		border-bottom:5px solid #000;
+	}
+
+	.col {
+		background:#fff;
+		text-align: center;
+		padding:90px 50px 20px 50px;
+			.icon-container {
+				padding:20px;
+				width:140px;
+				height:140px;
+				border:1px solid #000;
+				background:#fff;
+				border-radius: 50%;
+				margin:auto;
+			}
+
+			.media-label {
+				font-weight:800;
+				background:#fff;
+				border:1px solid #000;
+				display:inline-block;
+				padding:6px 30px;
+				font-size:21px;
+				position:relative;
+				top:-20px;
+			}
+
+			p {
+				font-size:16px;
+				color:#9f9f9f;
+			}
+
+			&:nth-child(odd) {
+				background:#f1f1f1;
+				
+			}	
+	}
+}
+
+.info-intro {
+	margin-top:40px;
+
+		.row {
+			
+			padding-bottom:40px;
+			margin-bottom:40px;
+
+			&:first-child {
+				border-bottom:1px solid #a7a7a7;
+			}
+		}
+
+		
+}
+
+.our-audience {
+	text-align:center;
+	background:#f1f1f1;
+
+		h4 {
+			border-bottom:2px solid #000;
+			display:inline-block;
+			position:relative;
+			padding-bottom:8px;
+			top:-52px;
+		}
+}
+
+
+.newsletter {
+
+	margin-bottom:50px;
+
+	.container {
+		border:1px solid #a7a7a7;
+		padding:20px 15px;
+	}
+
+	input[type=text] {
+		border: 1px solid #a7a7a7;
+		padding:7px 10px;
+		float:left;
+		margin-right:10px;
+		width:calc(100% - 130px);
+	}
+	
+}
+
+footer {
+	text-align: center;
+	font-size:12px;
+	margin-bottom:20px;
+		img {
+			width:30px;
+			margin-right:15px;
+		}
+}
+
+
+.btn {
+
+	border-radius: 0px;
+
+	&.btn-primary {
+		background:#fff;
+		border:2px solid #000;
+		color:#000;
+	}
+
+	&.btn-secondary {
+		background:#000;
+		border:2px solid #000;
+		color:#fff;
+		font-size:18px;
+		width:120px;
+	}
 }
