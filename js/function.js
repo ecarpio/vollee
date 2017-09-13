@@ -1,61 +1,31 @@
 $(function(){
 	console.log('test')
-	// Trio Height
-	// Fix Column Height
-	function fixTrioHeight(){
-		var elementHeights = $('.media-trio .col').map(function() {
-	    	return $(this).height();
-	  	}).get();
-
-		var maxHeight = Math.max.apply(null, elementHeights);
-
-		 $('.media-trio .col').height(maxHeight); 
-	}
-
-	fixTrioHeight();
 
 
+	var inputBox = $('input[type=text], input[type=email], input[type=password]')
 
-	// Fix Column Height
-	function fixHeight(){
-		var elementHeights = $('.testimonials .col p').map(function() {
-	    	return $(this).height();
-	  	}).get();
-
-		var maxHeight = Math.max.apply(null, elementHeights);
-
-		 $('.testimonials .col').height(maxHeight + 50); 
-	}
-
-	fixHeight();
-
-	// Fix Image Height
-	function fixImgHeight(){
-		var elementHeights = $('.product-image').map(function() {
-	    	return $(this).height();
-	  	}).get();
-
-		var maxHeight = Math.max.apply(null, elementHeights);
-		var imgPadding = maxHeight/4
-		console.log(maxHeight/4)
+	// Form Effect
+	inputBox.on('focus', function(){
+		$(this).addClass('active');
+		$(this).prev('label').addClass('active');
 		
-		$('.product-image.short').css({
-			'padding-top': imgPadding - 20,
-			'padding-bottom': imgPadding -30
-
-		}); 
-	}
-
-	fixImgHeight();
-
-	$( window ).resize(function() { 
-		fixHeight();
-		fixImgHeight();
-		fixTrioHeight()
 	})
 
-	$('.displayTableData').on('click', function(){
-		$('.product-table').toggleClass('active')
+	inputBox.on('blur', function(){
+		
+		console.log($(this).val())
+
+		if ($(this).val()) {
+			console.log('hasValue')
+		} else {
+			$(this).removeClass('active');
+			$(this).prev('label').removeClass('active');
+
+			console.log('novalue')
+		}
+
 	})
+
+	
 
 })
