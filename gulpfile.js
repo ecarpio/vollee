@@ -38,6 +38,7 @@ gulp.task('compress', function() {
     return gulp.src([
             config.bowerDir + '/jquery/dist/jquery.js',
             config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.js',
+            config.bowerDir + '/jquery-validation/dist/jquery.validate.js',
         ])
         .pipe(uglify())
         .pipe(concat('main.js'))

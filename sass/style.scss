@@ -3,8 +3,9 @@
 
 //Colors
 $mintGreen: #1de9b6;
+$mainBlue: #3a9afc;
 $bodyFont: #555555;
-
+$danger: #ff1744;
 
 // Type
 .poppins {
@@ -39,7 +40,28 @@ body {
 }
 
 
+// Sticky Footer
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+
 //Forms
+
 input[type=text], input[type=email], input[type=password] {
 	border:0px;
 	border-bottom:2px solid #ccc;
@@ -72,15 +94,81 @@ label {
 	margin-bottom:30px;
 }
 
+.checkbox-cover {margin-right:10px;}
+
+
+label.btn  {
+	position:relative;
+	margin-left:15px !important;
+	padding:2px 4px;
+	top:0px;
+	font-size:11px;
+	outline:none !important;    							
+		&.active {
+			transform: translateY(0) !important;
+			background-color:darken($mainBlue, 20%);
+		}
+
+		span.fa {
+			opacity:0;
+			font-size:11px;
+			color:#fff;
+		}
+}
+
+
+
+.btn.active span.fa {				
+	opacity: 1;				
+	font-size:12px;
+}
+
+.btn input {opacity:0; outline:none;}
+
+
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.error {border-bottom:2px solid $danger !important; color:$danger;}
+em.error{display:none !important;}
+.error + label {color:$danger; border:0px !important;}
+//input:required:valid {border-bottom:2px solid #ccc; }
+
+
+
+
 // Components
+
+.btn {border:0px !important;}
+
 .btn-primary {
 	background: $mintGreen;
 	border:1px solid $mintGreen;
-
 		&:hover {
-			color:lighten($mintGreen, 50%);
+			background-color:darken($mintGreen, 10%);
 		}
 }
+
+.btn-secondary {
+	background: $mainBlue;
+	border:1px solid $mainBlue;
+		&:hover {
+			background-color:darken($mainBlue, 10%);
+		}
+}
+
 
 .btn-lg {
 	font-size:20px;
@@ -140,27 +228,3 @@ footer {
 	bottom:15px;
 	width:100%;
 }
-
-label.btn  {
-	padding:2px 6px;
-	top:0px;
-	font-size:12px;
-	outline:none;    							
-		&.active {
-			transform: translateY(0) !important;
-		}
-
-		span.fa {
-			opacity:0;
-			font-size:12px;
-		}
-}
-
-
-
-.btn.active span.fa {				
-	opacity: 1;				
-	font-size:12px;
-}
-
-.btn input {opacity:0; outline:none;}
