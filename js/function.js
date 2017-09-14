@@ -1,5 +1,5 @@
 $(function(){
-	var inputBox = $('input[type=text], input[type=email], input[type=password]')
+	var inputBox = $('input[type=text], input[type=email], input[type=password], select')
 
 	// Form Effect
 	inputBox.on('focus', function(){

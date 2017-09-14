@@ -33,55 +33,35 @@
       <div class="row">
         <div class="col col-xs-12">
           <div class="login-splash">
-            <img src="images/cart-bug.png" />
+            <img src="images/graphic-bug.png" />
             Every Team needs a leader!
             <p>
-              Welcome to Vollee - the ABSOLUTE BEST* way to shop online with your team. Please complete your admin account below to get started!
+              We need a little more info to get your team set up. Give your team a name and add some details on how you intend to use your new Vollee cart - your team members will appreciate it!
             </p>
           </div>
         </div>
       </div>
 
       <!-- Begin Form -->
-      <form novalidate="novalidate">
+      <form>
         <div class="row">
-          <div class="col col-sm-6">
-            <input type="text" name="firstName" required />
-            <label>First Name</label>
+          <div class="col col-sm-12">
+            <input type="text" name="teamName" required />
+            <label>Vollee Team Name</label>
           </div>
 
-          <div class="col col-sm-6">
-            <input type="text" name="lastName" required />
-            <label>Last Name</label>
+          <div class="col col-sm-12">
+            <select required>
+              <option selected="selected" value=""></option>
+              <option value="Never">Never</option>
+            </select>
+            <label>How often do you intend to place orders?</label>
+
           </div>
 
-          <div class="col col-xs-12">
-            <input type="email" name="email" required />
-            <label>Email</label>
-          </div>
-
-          <div class="col col-xs-12">
-            <input type="password" name="password" required />
-            <label>Password</label>
-          </div>
-
-          <div class="col col-xs-12">
-            <input type="password" required name="password2" />
-            <label>Confirm Password</label>
-          </div>
-          
-          <div class="col col-xs-12 opt-in">
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-secondary checkbox-cover">
-                <input type="checkbox" autocomplete="off">
-                <span class="fa fa-check"></span>
-              </label>
-              It’s ok to send me emails about future Vollee updates.  
-            </div>
-          </div>
 
           <div class="col col-xs-12 button-container" align="center">
-            <button class="btn btn-lg btn-primary align-center" id="validateForm">SET UP MY TEAM</button>
+            <button class="btn btn-lg btn-primary align-center" id="validateForm">START SHOPPING</button>
           </div>
         </div>
       </form>

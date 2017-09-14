@@ -6,6 +6,7 @@ $mintGreen: #1de9b6;
 $mainBlue: #3a9afc;
 $bodyFont: #555555;
 $danger: #ff1744;
+$orange: #ff6d00;
 
 // Type
 .poppins {
@@ -62,7 +63,7 @@ body {
 
 //Forms
 
-input[type=text], input[type=email], input[type=password] {
+input[type=text], input[type=email], input[type=password], select {
 	border:0px;
 	border-bottom:2px solid #ccc;
 	background:none;
@@ -126,9 +127,6 @@ label.btn  {
 .btn input {opacity:0; outline:none;}
 
 
-
-
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -144,7 +142,6 @@ textarea:-webkit-autofill:active {
 .error {border-bottom:2px solid $danger !important; color:$danger;}
 em.error{display:none !important;}
 .error + label {color:$danger; border:0px !important;}
-//input:required:valid {border-bottom:2px solid #ccc; }
 
 
 
@@ -170,17 +167,65 @@ em.error{display:none !important;}
 }
 
 
+.btn-image {
+	background:none;
+
+		&.cart-button {
+			margin-top:12px;
+			background:url('../images/cart-icon.png') no-repeat center top;
+			width:50px;
+			height:48px;
+		}
+}
+
 .btn-lg {
 	font-size:20px;
 	padding:15px 30px;
 }
 
+.dropdown-menu {
+	padding:10px 0px;
+
+	li {
+		.fa {
+			color:$orange;
+			font-size:14px;
+			margin-right:10px;
+		}
+	}
+}
+
 
 // Structure
 
+.search-container {
+	border:2px solid $mintGreen !important;
+	border-radius:50px;
+	margin:10px 0px 0px 0px !important;
+	padding:10px 20px !important;
+	box-shadow:inset 0px 0px 8px rgba(0,0,0,0.05);
+
+		&:before {
+			font-family:"FontAwesome";
+			content:"\f002";
+			position:absolute;
+			left:40px;
+			color:#ccc;
+			font-size:20px;
+		}
+
+		.search {
+			font-size:20px;
+			padding:0px 10px 0px 30px;
+			border:0px;
+			margin:0px;
+		}
+}
+
 .navbar-default {
 	background-color:#fff;
-
+	min-height:80px;
+	margin-bottom:0px;
 		.navbar-brand {
 			padding:13px 0 16px 15px;
 			height:auto;
@@ -195,6 +240,7 @@ em.error{display:none !important;}
 .login {
 	background-color:#fafafa;
 	max-width:900px;
+	padding-top:50px;
 }
 
 .login-splash {
@@ -216,6 +262,10 @@ em.error{display:none !important;}
 			font-weight:300;
 			@extend .poppins;
 		}
+}
+
+.button-container {
+	margin-top:30px;
 }
 
 footer {

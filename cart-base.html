@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Starter Template for Bootstrap</title>
+    <!-- Google Font Load -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Poppins:400,500,700" rel="stylesheet">
+   
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-toggleable-md navbar-default">
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col col-sm-3 col-xs-4">
+          <a class="navbar-brand" href="#"><img src="images/vollee-logo.png" /></a>
+        </div>
+
+        <div class="col col-sm-6 col-xs-6" align="center">
+          <div class="search-container">
+            <input type="text" class="search" />
+          </div>
+        </div>
+
+        <div class="col col-sm-3 col-xs-2" align="right">
+
+          <div class="btn-group" >
+            <button type="button" class="btn btn-image cart-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="#"><i class="fa fa-users"></i> Manage Team</a></li>
+              <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+              <li><a href="#"><i class="fa fa-cog"></i> SignOut</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>  
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col col-xs-12">
+            test
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="container login">
+
+      <div class="row">
+        <div class="col col-xs-12">
+          <div class="login-splash">
+            <img src="images/graphic-bug.png" />
+            Every Team needs a leader!
+            <p>
+              We need a little more info to get your team set up. Give your team a name and add some details on how you intend to use your new Vollee cart - your team members will appreciate it!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Begin Form -->
+      <form>
+        <div class="row">
+          <div class="col col-sm-12">
+            <input type="text" name="teamName" required />
+            <label>Vollee Team Name</label>
+          </div>
+
+          <div class="col col-sm-12">
+            <select required>
+              <option selected="selected" value=""></option>
+              <option value="Never">Never</option>
+            </select>
+            <label>How often do you intend to place orders?</label>
+          </div>
+
+
+          <div class="col col-xs-12 button-container" align="center">
+            <button class="btn btn-lg btn-primary align-center" id="validateForm">START SHOPPING</button>
+          </div>
+        </div>
+      </form>
+      <!-- End Form -->
+    </div>
+
+    
+    <footer>
+      *We may be a little biased, but are always working hard to make sure you think so, too!
+    </footer>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/function.js"></script>
+  </body>
+</html>
