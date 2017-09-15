@@ -164,7 +164,11 @@ em.error{display:none !important;}
 
 // Components
 
-.btn {border:0px !important;}
+.btn {
+	border:0px !important;
+	font-weight:500;
+	@extend .poppins;
+}
 
 .btn-primary {
 	background: $mintGreen;
@@ -182,6 +186,15 @@ em.error{display:none !important;}
 		}
 }
 
+.btn-orange {
+	background: $orange;
+	border:1px solid $orange;
+	color:#fff;
+		&:hover {
+			background-color:lighten($orange, 10%);
+			color:#fff;
+		}
+}
 
 .btn-image {
 	background:none;
@@ -316,6 +329,7 @@ em.error{display:none !important;}
 	color:$orange;
 	@extend .nunito;
 	font-weight:700;
+	margin-bottom:30px;
 		img {
 			display:block;
 			margin:auto;
@@ -334,10 +348,49 @@ em.error{display:none !important;}
 
 .button-container {
 	margin-top:30px;
+	margin-bottom:80px;
 }
 
 .cart {
 	background:#fff;
+}
+
+.related-header {
+	background-color:#fafafa;
+	padding:10px 15px;
+	font-size:20px;
+	margin-bottom:30px;
+}
+
+.related-item {
+
+	margin-bottom:30px;
+
+	img {
+		float:left;
+		margin-right:10px;
+	}
+
+	.related-info {
+		font-size:16px;
+		color:#000;
+
+			.related-pricing {
+				color:#666;
+				margin-top:15px;
+				font-size:14px;
+
+					a {
+						color:$mintGreen;
+						margin-right:10px;
+						margin-left:10px;
+					}
+
+					.price {
+						display:inline-block;
+					}
+			}
+	}
 }
 
 footer {
