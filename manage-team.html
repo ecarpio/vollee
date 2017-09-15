@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Starter Template for Bootstrap</title>
+    <!-- Google Font Load -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Poppins:400,500,700" rel="stylesheet">
+   
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-toggleable-md navbar-default">
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col col-sm-3 col-xs-4">
+          <a class="navbar-brand" href="#"><img src="images/vollee-logo.png" /></a>
+        </div>
+
+        <div class="col col-sm-6 col-xs-6" align="center">
+          <div class="search-container">
+            <input type="text" class="search" />
+          </div>
+        </div>
+
+        <div class="col col-sm-3 col-xs-2" align="right">
+
+          <div class="btn-group" >
+            <button type="button" class="btn btn-image cart-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="#"><i class="fa fa-users"></i> Manage Team</a></li>
+              <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+              <li><a href="#"><i class="fa fa-cog"></i> SignOut</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>  
+      </div>
+    </nav>
+
+    <div class="members">
+      <div class="container">
+        <div class="row">
+          <div class="col col-xs-12">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>
+                      <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-checkbox checkbox-cover">
+                          <input type="checkbox" autocomplete="off" class="selectAll">
+                          <span class="fa fa-check"></span>
+                        </label>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>joe@basisworldwide.com</td>
+                    <td>Joe DiPietro (Admin)</td>
+                    <td><span class="accepted">Accepted</span></td>
+                    <td>
+                      <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-checkbox checkbox-cover">
+                          <input type="checkbox" autocomplete="off">
+                          <span class="fa fa-check"></span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>joe@basisworldwide.com</td>
+                    <td>Joe DiPietro (Admin)</td>
+                    <td><span class="pending">Pending</span> <a href="#">RESEND</a></td>
+                    <td>
+                      <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-checkbox checkbox-cover">
+                          <input type="checkbox" autocomplete="off">
+                          <span class="fa fa-check"></span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>joe@basisworldwide.com</td>
+                    <td>Joe DiPietro (Admin)</td>
+                    <td><span class="expired">Expired</span> <a href="#">RESEND</a></td>
+                    <td>
+                      <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-checkbox checkbox-cover">
+                          <input type="checkbox" autocomplete="off">
+                          <span class="fa fa-check"></span>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cart">
+      <div class="container">
+        <div class="row">
+          <div class="col col-xs-12">
+            <div class="team-splash">
+              <img src="images/graphic-bug.png" />
+              The gang’s all here! .. or are they?
+              <p>
+                Missing some team members? It’s easy to invite your friends, family, coworkers, and even strangers to collaborate on your Vollee cart. Just enter their emails to send an invitation!
+              </p>
+            </div>
+          </div>
+
+          <div class="col col-xs-12 button-container" align="center">
+            <button class="btn btn-lg btn-purple align-center" data-toggle="modal" data-target="#addMembers">ADD TEAM MEMBERS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="super">
+      <div class="container">
+        <div class="row">
+          <div class="col col-sm-6">
+            <div class="footer-links">
+              <img src="images/vollee-footer-logo.png" />
+              <a href="#">ABOUT</a>
+              <a href="#">FAQs</a>
+              <a href="#">CONTACT</a>
+            </div>
+            <div class="copyright">
+              &copy; 2017 Vollee, Inc.<br />
+              View our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+            </div>
+          </div>
+          <div class="col col-sm-6">
+            <a href="#" class="feedback">SEND US YOUR FEEDBACK</a>
+            <p>
+              Want to suggest a feature? Find a bug that needs squashed? We love hearing from you and read EVERY email we receive - even the painful ones. Feedback come thru! Email us at info@vollee.com.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <div class="modal fade" id="addMembers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Invite Team Members</h4>
+            <p>Please enter emails separated by commas.</p>
+          </div>
+          <div class="modal-body">
+            <textarea placeholder="johndoe@email.com, janedoe@email.com"></textarea>
+          </div>
+          <div class="modal-footer">
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-checkbox checkbox-cover">
+                <input type="checkbox" autocomplete="off" class="selectAll">
+                <span class="fa fa-check"></span>
+              </label>
+              Add these members as admin
+            </div>
+            <br />
+            <button type="button" class="btn btn-primary">SEND INVITATIONS</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/function.js"></script>
+  </body>
+</html>
